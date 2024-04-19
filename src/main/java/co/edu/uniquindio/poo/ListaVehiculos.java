@@ -1,5 +1,5 @@
 package co.edu.uniquindio.poo;
 
-public class ListasDeVehiculos {
+public class ListaVehiculos {
     
 }

@@ -1,5 +1,5 @@
 package co.edu.uniquindio.poo;
 
-public class ListaDeMotosCompradores {
+public class ListaVeloMax {
     
 }
