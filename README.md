@@ -5,7 +5,8 @@ Descripciín basisca de su Proyecto de POO ...
 # Autores
 
 - Santiago Carvajal
-- Autor 2
+- Derek Rodriguez
+- Sara Vergara
 
 # Herramientas
 
