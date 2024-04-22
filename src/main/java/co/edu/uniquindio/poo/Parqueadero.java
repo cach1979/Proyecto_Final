@@ -2,75 +2,79 @@ package co.edu.uniquindio.poo;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Parqueadero {
-
+    static Scanner scanner = new Scanner(System.in);
+    static IngresoCarro carro = new IngresoCarro();
+    static IngresoMoto moto = new IngresoMoto();
     public static String[][] carrosInicial = new String[8][8]; 
     public static String[][] motosInicial = new String[10][10]; 
 
     public static int contadorCarros = 0;
     public static int contadorMotos = 0; 
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+    String menuP;
+        menuP = "<<< SELECIONA TU OPCION >>> \n";
+        menuP += "1. Registrar entrada de vehículo \n";
+        menuP += "2. Registrar salida de vehículo \n";
+        menuP += "3. Mostrar estado actual del parqueadero \n";
+        menuP += "4. Salir del programa";
+    int opcP = 0;
+    boolean salir = false;
+    String input;
 
-        inicializarParqueadero();
+    do {
+        try {
+            System.out.println(menuP);
+            input = scanner.nextLine();
+            opcP = Integer.parseInt(input);
+    
+        switch (opcP) {
+            case 1:
+                String menuV;
+                    menuV = "<<< SELECION DE VEHICULO >>> \n";
+                    menuV += "1. Carro \n";
+                    menuV += "2. Moto \n";
+                int opcV = 0;
 
-        Scanner scanner = new Scanner(System.in);
+                System.out.print(menuV);
+                opcV = scanner.nextInt();
+                scanner.nextLine();
+                    if (opcV == 1) {
+                        carro.parqueaderoCupos();
+                    } else if(opcV == 2) {
+                        moto.parqueaderoCupos();
+                    } else {
+                        System.out.println("Opcion no valida");
+                    }
+                break;
 
-        while (true) {
-
-            System.out.println("\n¿Qué acción desea realizar?");
-            System.out.println("1. Registrar entrada de vehículo");
-            System.out.println("2. Registrar salida de vehículo");
-            System.out.println("3. Mostrar estado actual del parqueadero");
-            System.out.println("4. Salir del programa");
-            System.out.print("Ingrese el número de la acción: ");
-
-            int opcion;
-
-            try {
-                opcion = scanner.nextInt();
-
-            } catch (Exception e) {
-                System.out.println("Error al leer la opción. Por favor, ingrese un número válido.");
-                scanner.next(); 
-                continue;
+            case 2:
+                registrarSalida(scanner);
+                break;
+    
+            case 3:
+                mostrarEstadoParqueadero();
+                break;
+    
+            case 4:
+                salir = true;
+                System.out.println("¡Gracias por usar el programa!");
+                break;
+    
+            default:
+                System.out.println("Opción no válida. Por favor, intente de nuevo.");
+                break;
             }
-
-            switch (opcion) {
-
-                case 1:
-
-                    registrarEntrada(scanner);
-                    break;
-
-                case 2:
-
-                    registrarSalida(scanner);
-                    break;
-
-                case 3:
-
-                    mostrarEstadoParqueadero();
-                    break;
-
-                case 4:
-
-                    System.out.println("Saliendo del programa...");
-                    scanner.close();
-                    return;
-
-                default:
-
-                    System.out.println("Opción no válida. Por favor, intente de nuevo.");
-                    break;
-
-            }
-
+        }  catch (InputMismatchException e) {
+            System.out.println("Error: Entrada inválida. Por favor, ingrese un número entero.");
+                scanner.nextLine();
         }
-
-    }
+    } while (opcP!=4);
+}
 
     public static void inicializarParqueadero() {
 
@@ -230,9 +234,9 @@ public class Parqueadero {
 
                 System.out.print(puesto + "\t");
     
-             }
+            }
             
-             System.out.println();
+            System.out.println();
 
         }
 
