@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 public class UsuarioEncargado {
     
-    public static int TARIFA_MOTO_CLASICA = 1000; 
+    public static int TARIFA_MOTO_CLASICA = 2000; 
     public static int TARIFA_MOTO_HIBRIDA = 5000; 
     public static int TARIFA_CARRO = 10000;       
 
