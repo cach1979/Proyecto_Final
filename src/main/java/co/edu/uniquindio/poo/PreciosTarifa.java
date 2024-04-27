@@ -10,7 +10,7 @@ public class PreciosTarifa {
         System.out.println("Ingrese el tipo de vehículo:" + "\n" + "1: Moto Clásica" + "\n" + "2: Moto Híbrida" + "\n" + "3: Carro");
         int tipoVehiculo = scanner.nextInt();
 
-        System.out.println("Ingrese el número de horas de estacionamiento:");
+        System.out.println("\n" + "Ingrese el número de horas de estacionamiento:");
         int horas = scanner.nextInt();
 
         int costo = 0;
@@ -33,7 +33,7 @@ public class PreciosTarifa {
         }
 
         if (costo > 0) {
-            System.out.println("El costo total del estacionamiento es: " + costo);
+            System.out.println("\n" + "El costo total del estacionamiento es: " + costo);
         } else {
             System.out.println("El costo debe ser mayor a cero (0)");
         }
