@@ -8,7 +8,7 @@ public class IngresoCarro {
     Scanner scanner;
     private String [][] carrosInicial;
     private int contadorCarros;
-
+    
     public void ingresoCarro() {
         this.carrosInicial = new String[8][8];
         this.contadorCarros = 0;
