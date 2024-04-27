@@ -7,7 +7,7 @@ public class PreciosTarifa {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese el tipo de vehículo (1: Moto Clásica, 2: Moto Híbrida, 3: Carro):");
+        System.out.println("Ingrese el tipo de vehículo:" + "\n" + "1: Moto Clásica" + "\n" + "2: Moto Híbrida" + "\n" + "3: Carro");
         int tipoVehiculo = scanner.nextInt();
 
         System.out.println("Ingrese el número de horas de estacionamiento:");
