@@ -53,7 +53,7 @@ public class SalidaCarro {
     private boolean validarInformacionCorrecta(String matricula, String modelo, String nombrePropietario) {
 
         return matricula.equalsIgnoreCase("ABC123") &&
-               modelo.equalsIgnoreCase("Toyota Corolla") &&
-               nombrePropietario.equalsIgnoreCase("Juan Pérez");
+            modelo.equalsIgnoreCase("Toyota Corolla") &&
+            nombrePropietario.equalsIgnoreCase("Juan Pérez");
     }
 }

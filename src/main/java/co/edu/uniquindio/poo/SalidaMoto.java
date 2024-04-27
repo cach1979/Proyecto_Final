@@ -51,9 +51,9 @@ public class SalidaMoto {
     }
 
     private boolean validarInformacionCorrecta(String placa, String modelo, String nombrePropietario) {
- 
+
         return placa.equalsIgnoreCase("XYZ789") &&
-               modelo.equalsIgnoreCase("Honda CB500") &&
-               nombrePropietario.equalsIgnoreCase("María López");
+            modelo.equalsIgnoreCase("Honda CB500") &&
+            nombrePropietario.equalsIgnoreCase("María López");
     }
 }
